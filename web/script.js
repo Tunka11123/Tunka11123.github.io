@@ -70,7 +70,7 @@ const isLeapYear = (year) => {
   for (let i = 0; i <= days_of_month[month] + first_day.getDay() - 1; i++) {
   
       let day = document.createElement('button');
-  
+      day.id = 'heart';
       if (i >= first_day.getDay()) {
         day.innerHTML = i - first_day.getDay() + 1;
 
@@ -130,4 +130,22 @@ const isLeapYear = (year) => {
     day: 'numeric',
     weekday: 'long',
   };
- 
+  const modal = document.getElementById("myModal");
+    const span = document.getElementsByClassName("close")[0];
+
+    // Добавляем обработчик события для кнопки
+    button.onclick = function() {
+        modal.style.display = "block"; // Открываем модальное окно
+    }
+
+    // Добавляем обработчик события для кнопки закрытия
+    span.onclick = function() {
+        modal.style.display = "none"; // Закрываем модальное окно
+    }
+
+    // Закрываем модальное окно, если кликнули вне его
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none"; // Закрываем модальное окно
+        }
+    }
