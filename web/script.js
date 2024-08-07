@@ -84,7 +84,6 @@ const isLeapYear = (year) => {
       calendar_days.appendChild(day);
     }
   };
-  
   let month_list = calendar.querySelector('.month-list');
   month_names.forEach((e, index) => {
     let month = document.createElement('div');
