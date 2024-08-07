@@ -15,5 +15,14 @@ func InstallDb() error {
 		return err
 	}
 	defer db.Close()
+	_, err = db.Exec(`CREATE TABLE IF NOT EXISTS "calendar" (
+		id SERIAL PRIMARY KEY,
+		user TEXT NOT NULL,
+		time TEXT NOT NULL
+	)`)
+	if err != nil {
+		log.Fatal(err)
+		return err
+	}
 	return nil
 }
