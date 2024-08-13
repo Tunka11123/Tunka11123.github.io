@@ -1,0 +1,9 @@
+server:
+  port: :8008 # SERV_PORT
+db:
+  host: localhost # DB_HOST
+  user: tunk # DB_USER
+  password: tunk # DB_PASSWORD
+  name:   records # DB_NAME
+  port: 5432 # DB_PORT
+  sslmode: disable # SSL_MODE

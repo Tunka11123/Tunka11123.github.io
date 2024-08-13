@@ -1,3 +1,3 @@
 # Calendar with HTML, CSS & JavaScript
 
-![Alt text](calendar.bmp?raw=true "")
+![Alt text](web/calendar.bmp?raw=true "")
